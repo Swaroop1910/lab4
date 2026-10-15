@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main',
+                git branch: 'master',
                     url: 'https://github.com/Swaroop1910/lab4.git'
             }
         }
