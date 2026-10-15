@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "swaroop1910/app-image"
+        DOCKER_IMAGE = "swaroop1910/token"
     }
 
     stages {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Swaroop1910/lab4.git'
+                git branch: 'main',
+                    url: 'https://github.com/Swaroop1910/lab4.git'
             }
         }
 
