@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "Swaroop1910/token"
+        DOCKER_IMAGE = "swaroop1910/token"
     }
 
     stages {
@@ -27,7 +27,7 @@ pipeline {
                 )]) {
                     bat '''
                     @echo off
-                    echo %DOCKER_PAT%|docker login -u akshatha29 --password-stdin
+                    echo %DOCKER_PAT%|docker login -u swaroop1910 --password-stdin
                    if errorlevel 1 exit /b 1
                     '''
                 }
